@@ -1,0 +1,70 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_tv"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:orderInCategory="103"
+        android:showAsAction="always"
+        android:title="@string/menu_tv"/>
+    
+    <item
+        android:id="@+id/menu_horn"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:orderInCategory="102"
+        android:showAsAction="always"
+        android:title="@string/menu_horn"/>
+    
+    <item
+        android:id="@+id/menu_disconnect"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_disconnect"/>
+    <item
+        android:id="@+id/menu_connect"
+        android:icon="@android:drawable/ic_input_get"
+        android:orderInCategory="101"
+        android:showAsAction="always"
+        android:title="@string/menu_connect"/>
+    
+    
+    <item
+        android:id="@+id/menu_power"
+        android:icon="@android:drawable/ic_media_play"
+        android:orderInCategory="101"
+        android:showAsAction="never"
+        android:title="Power"/>
+    
+    
+    <item
+        android:id="@+id/menu_source"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:orderInCategory="101"
+        android:showAsAction="never"
+        android:title="Source"/>
+    
+    <item
+        android:id="@+id/menu_up"
+        android:icon="@android:drawable/ic_menu_directions"
+        android:orderInCategory="101"
+        android:showAsAction="never"
+        android:title="Up"/>
+    
+    <item
+        android:id="@+id/menu_left"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:orderInCategory="101"
+        android:showAsAction="never"
+        android:title="Left"/>
+    
+
+        <item
+        android:id="@+id/menu_home"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:orderInCategory="101"
+        android:showAsAction="never"
+        android:title="Home"/>
+    
+    
+    
+</menu>
