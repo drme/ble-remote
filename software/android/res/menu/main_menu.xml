@@ -1,10 +1,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/menu_connect"
-        android:icon="@android:drawable/ic_input_get"
-        android:orderInCategory="101"
-        android:showAsAction="always"
-        android:title="@string/menu_connect"/>
+        android:id="@+id/menu_refresh"
+        android:checkable="false"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+        android:title="@string/status"/>
+    <item
+        android:id="@+id/add_remote"
+        android:showAsAction="never"
+        android:title="@string/add_remote"/>
+    <item
+        android:id="@+id/add_remote_button"
+        android:showAsAction="never"
+        android:title="@string/add_remote_button"/>
+    <item
+        android:id="@+id/delete_remote"
+        android:showAsAction="never"
+        android:title="@string/delete_remote"/>
+    <item
+        android:id="@+id/edit_remote"
+        android:showAsAction="never"
+        android:title="@string/edit_remote"/>
 
 </menu>

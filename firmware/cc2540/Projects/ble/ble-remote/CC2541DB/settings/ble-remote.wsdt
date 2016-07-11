@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>ble-remote/CC2541-OAD-ImgB</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>671</Column0><Column1>12</Column1><Column2>27</Column2><Column3>0</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1395</ColumnWidth1><ColumnWidth2>372</ColumnWidth2><ColumnWidth3>93</ColumnWidth3></Build>
+      <TerminalIO/>
+    <Debug-Log><ColumnWidth0>17</ColumnWidth0><ColumnWidth1>3784</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-28084-22030</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>ble-remote</ExpandedNode><ExpandedNode>ble-remote/APP</ExpandedNode><ExpandedNode>ble-remote/HAL</ExpandedNode><ExpandedNode>ble-remote/HAL/Target</ExpandedNode><ExpandedNode>ble-remote/HAL/Target/CC2540EB</ExpandedNode><ExpandedNode>ble-remote/HAL/Target/CC2540EB/Drivers</ExpandedNode><ExpandedNode>ble-remote/PROFILES</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-15767-22056</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-20094-7236</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\bleremote.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>605</SelStart><SelEnd>605</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\bleremote.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\bleirprofile.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\startup.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>200</SelStart><SelEnd>200</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\bleirprofile.c</Filename><XPos>0</XPos><YPos>336</YPos><SelStart>3971</SelStart><SelEnd>3971</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\hal_irgen_RC5.c</Filename><XPos>0</XPos><YPos>293</YPos><SelStart>10599</SelStart><SelEnd>10599</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\hal_irgen_SIRC.c</Filename><XPos>0</XPos><YPos>90</YPos><SelStart>5682</SelStart><SelEnd>5682</SelEnd></Tab><ActiveTab>6</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\hal_irgen_RC5.h</Filename><XPos>0</XPos><YPos>37</YPos><SelStart>3877</SelStart><SelEnd>3896</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\hal_irgen.h</Filename><XPos>0</XPos><YPos>18</YPos><SelStart>2660</SelStart><SelEnd>2660</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\hal_irgen_NEC.c</Filename><XPos>0</XPos><YPos>307</YPos><SelStart>11344</SelStart><SelEnd>11344</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\hal_irgen_NEC.h</Filename><XPos>0</XPos><YPos>48</YPos><SelStart>3988</SelStart><SelEnd>3988</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\hal_irgen_SIRC.h</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\Components\ble\include\gatt.h</Filename><XPos>0</XPos><YPos>232</YPos><SelStart>10936</SelStart><SelEnd>10936</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-05491af0><key>iaridepm.enu1</key></Toolbar-05491af0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>816</Bottom><Right>730</Right><x>-2</x><y>-2</y><xscreen>400</xscreen><yscreen>416</yscreen><sizeHorzCX>104167</sizeHorzCX><sizeHorzCY>201161</sizeHorzCY><sizeVertCX>190625</sizeVertCX><sizeVertCY>791103</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>386</Bottom><Right>3842</Right><x>-2</x><y>-2</y><xscreen>3844</xscreen><yscreen>388</yscreen><sizeHorzCX>1001042</sizeHorzCX><sizeHorzCY>187621</sizeHorzCY><sizeVertCX>104167</sizeVertCX><sizeVertCY>201161</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

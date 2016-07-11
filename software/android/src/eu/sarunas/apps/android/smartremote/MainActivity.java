@@ -1,460 +1,217 @@
 package eu.sarunas.apps.android.smartremote;
 
-import java.io.IOException;
-import java.util.Locale;
-import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
-import android.app.ProgressDialog;
-import android.bluetooth.BluetoothDevice;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.hardware.Sensor;
-import android.hardware.SensorManager;
+import android.database.DataSetObserver;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener, IConnectionHandler
 {
+	private RemotesPagerAdapter remotesPagerAdapter = null;
+	private ViewPager viewPager = null;
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+		this.remotesPagerAdapter.reload(getApplicationContext());
+	};
 
-	/**
-	 * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the sections. We use a {@link android.support.v4.app.FragmentPagerAdapter} derivative, which will keep every loaded fragment in memory. If this becomes too memory intensive, it may be best to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
-	 */
-	SectionsPagerAdapter mSectionsPagerAdapter;
-
-	/**
-	 * The {@link ViewPager} that will host the section contents.
-	 */
-	ViewPager mViewPager;
+	@Override
+	public void onConnected(final RemoteService service)
+	{
+		invalidateOptionsMenu();
+	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
+		BaseActivity.updateTitle(this, false, true, "Smart Remote");
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		this.handler = new Handler();
-		
-		
-		// Set up the action bar.
-		final ActionBar actionBar = getActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+//		final ActionBar actionBar = getActionBar();
+	//	actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-		// Create the adapter that will return a fragment for each of the three
-		// primary sections of the app.
-		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+		this.remotesPagerAdapter = new RemotesPagerAdapter(getSupportFragmentManager(), this);
 
-		// Set up the ViewPager with the sections adapter.
-		mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
+		this.viewPager = (ViewPager) findViewById(R.id.pager);
+		this.viewPager.setAdapter(this.remotesPagerAdapter);
 
-		// When swiping between different sections, select the corresponding
-		// tab. We can also use ActionBar.Tab#select() to do this if we have
-		// a reference to the Tab.
-		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener()
+		this.viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener()
 		{
 			@Override
 			public void onPageSelected(int position)
 			{
-				actionBar.setSelectedNavigationItem(position);
-			}
+	//			actionBar.setSelectedNavigationItem(position);
+				
+				RemoteFragment page = (RemoteFragment)remotesPagerAdapter.getItem(position);
+				
+				RemotesManager.getInstance().setActiveRemote(page.getRemote());
+				
+			//	page.buildUI();
+				
+//				actionBar.setTitle(RemotesManager.getInstance().getActiveRemote().getName());
+			};
 		});
 
-		// For each of the sections in the app, add a tab to the action bar.
-		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++)
+		this.remotesPagerAdapter.registerDataSetObserver(new DataSetObserver()
 		{
-			// Create a tab with text corresponding to the page title defined by
-			// the adapter. Also specify this Activity object, which implements
-			// the TabListener interface, as the callback (listener) for when
-			// this tab is selected.
-			actionBar.addTab(actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this));
-		}
-	}
+			@Override
+			public void onChanged()
+			{
+				if (null == RemotesManager.getInstance().getActiveRemote())
+				{
+					RemoteFragment page = (RemoteFragment)remotesPagerAdapter.getItem(viewPager.getCurrentItem());
+					
+					RemotesManager.getInstance().setActiveRemote(page.getRemote());
+				}
+				
+				//updateActiveRemote();
+				//actionBar.setTitle(RemotesManager.getInstance().getActiveRemote().getName());
+				
+				
+				/*actionBar.removeAllTabs();
+
+				for (int i = 0; i < MainActivity.this.remotesPagerAdapter.getCount(); i++)
+				{
+					actionBar.addTab(actionBar.newTab().setText(MainActivity.this.remotesPagerAdapter.getPageTitle(i)).setTabListener(MainActivity.this));
+				} */
+			};
+		});
+
+		this.remotesPagerAdapter.reload(getApplicationContext());
+	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main_menu, menu);
+
+		if (null != DevicesManager.getInstance().getRemoteService())
+		{
+			menu.findItem(R.id.menu_refresh).setActionView(null);
+		}
+		else
+		{
+			menu.findItem(R.id.menu_refresh).setActionView(R.layout.actionbar_indeterminate_progress);
+		}
+
 		return true;
-	}
+	};
 
 	@Override
-	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction)
+	public void onDisconnected()
 	{
-		// When the given tab is selected, switch to the corresponding page in
-		// the ViewPager.
-		mViewPager.setCurrentItem(tab.getPosition());
-	}
-
-	@Override
-	public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction)
-	{
-	}
-
-	@Override
-	public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction)
-	{
-	}
-
-	/**
-	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to one of the sections/tabs/pages.
-	 */
-	public class SectionsPagerAdapter extends FragmentPagerAdapter
-	{
-
-		public SectionsPagerAdapter(FragmentManager fm)
-		{
-			super(fm);
-		}
-
-		@Override
-		public Fragment getItem(int position)
-		{
-			if (0 == position)
-			{
-					return new MainFragment();
-			}
-			
-			
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a DummySectionFragment (defined as a static inner class
-			// below) with the page number as its lone argument.
-			Fragment fragment = new DummySectionFragment();
-			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-			fragment.setArguments(args);
-			return fragment;
-		}
-
-		@Override
-		public int getCount()
-		{
-			// Show 3 total pages.
-			return 2;
-		}
-
-		@Override
-		public CharSequence getPageTitle(int position)
-		{
-			Locale l = Locale.getDefault();
-			switch (position)
-			{
-				case 0:
-					return getString(R.string.title_section1).toUpperCase(l);
-				case 1:
-					return getString(R.string.title_section2).toUpperCase(l);
-			}
-			return null;
-		}
-	}
-
-	/**
-	 * A dummy fragment representing a section of the app, but that simply displays dummy text.
-	 */
-	public static class DummySectionFragment extends Fragment
-	{
-		/**
-		 * The fragment argument representing the section number for this fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public DummySectionFragment()
-		{
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-		{
-			View rootView = inflater.inflate(R.layout.fragment_main_dummy, container, false);
-			TextView dummyTextView = (TextView) rootView.findViewById(R.id.section_label);
-			dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
-			return rootView;
-		}
-	}
+		DevicesManager.getInstance().setRemoteService(null);
+		DevicesManager.getInstance().startScan(getApplicationContext(), this);
+		
+		invalidateOptionsMenu();
+	};
 	
-	
+	private void updateActiveRemote()
+	{
+		if (RemotesManager.getInstance().getActiveRemote() == null)
+		{
+			RemotesManager.getInstance().setActiveRemote(((RemoteFragment)this.remotesPagerAdapter.getItem(this.viewPager.getCurrentItem())).getRemote());
+		}
+	};
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
 		switch (item.getItemId())
 		{
-			case R.id.menu_connect:
-                Intent newIntent = new Intent(this, DeviceScanActivity.class);
-                startActivityForResult(newIntent, REQUEST_SELECT_DEVICE);
+			case R.id.edit_remote:
+				updateActiveRemote();
+				Intent newIntent = new Intent(this, EditRemoteActivity.class);
+				startActivityForResult(newIntent, 0xf00d);
+				overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+				return true;
+			case R.id.add_remote:
+				updateActiveRemote();
+				RemotesManager.getInstance().addDefaultRemoteSirc("new remote", getApplicationContext());
+				this.remotesPagerAdapter.reload(getApplicationContext());
+				return true;
+			case R.id.add_remote_button:
+				updateActiveRemote();
+				Remote remote = RemotesManager.getInstance().getActiveRemote();
+				remote.getButtons().add(new RemoteButton(300, 300, 300, 300, "new b", false, 0));
+				remote.save(getApplicationContext());
+				RemoteFragment fragment = (RemoteFragment) this.remotesPagerAdapter.getItem(this.viewPager.getCurrentItem());
+				fragment.buildUI();
+				return true;
+			case R.id.delete_remote:
+				updateActiveRemote();
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+				builder.setMessage("Delete remote?");
+				builder.setCancelable(true);
+
+				builder.setPositiveButton("Delete", new DialogInterface.OnClickListener()
+				{
+					@Override
+					public void onClick(DialogInterface dialog, int id)
+					{
+						RemotesManager.getInstance().getActiveRemote().delete(getApplicationContext());
+						RemotesManager.getInstance().setActiveRemote(null);
+						MainActivity.this.remotesPagerAdapter.reload(getApplicationContext());
+						dialog.dismiss();
+					};
+				});
+
+				builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener()
+				{
+					@Override
+					public void onClick(DialogInterface dialog, int id)
+					{
+						dialog.cancel();
+					};
+				});
+
+				builder.show();
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
 		}
-	};	
-	
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data)
-	{
-		if (REQUEST_SELECT_DEVICE == requestCode)
-		{
-			if (resultCode == RESULT_OK)
-			{
-				String deviceAddress = data.getExtras().getString(BluetoothDevice.EXTRA_DEVICE);
-			
-				connectLE(deviceAddress);
-			}
-		}
-	};
-	
-	private void connectLE(String deviceAddress)
-	{
-		this.progress = ProgressDialog.show(this, "", "Connecting to: " + deviceAddress, true);
-		
-		try
-		{
-			tellyService = null;
-			
-			new TellyService(deviceAddress, this, this);
-		}
-		catch (Throwable ex)
-		{
-			tellyService = null;
-
-			AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-			alertDialog.setTitle("BT connect error: " + deviceAddress);
-			alertDialog.setMessage(ex.getMessage());
-
-			alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener()
-			{
-				public void onClick(DialogInterface dialog, int whichButton)
-				{
-				}
-			});
-
-			alertDialog.show();
-		}
-	};	
-
-	public static class MainFragment extends Fragment
-	{
-		public MainFragment()
-		{
-		};
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-		{
-			View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-
-			((Button) rootView.findViewById(R.id.buttonPower)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendPower();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonSource)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendSource();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonHome)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendHome();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonBack)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendBack();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonVolumeUp)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendVolumeUp();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonVolumeDown)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendVolumeDown();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonOk)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendOk();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonUp)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendUp();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonDown)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendDown();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonLeft)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendLeft();
-
-					return false;
-				}
-			});
-
-			((Button) rootView.findViewById(R.id.buttonRight)).setOnTouchListener(new OnTouchListener()
-			{
-				@Override
-				public boolean onTouch(View arg0, MotionEvent arg1)
-				{
-					if (null != tellyService)
-						tellyService.sendRight();
-
-					return false;
-				}
-			});
-
-			return rootView;
-		};
-	}
-	
-	@Override
-	public void onConnected(final TellyService service)
-	{
-		tellyService = service;
-		
-		this.handler.post(new Runnable()
-		{
-			public void run()
-			{
-				Toast.makeText(getApplicationContext(), "Connected to: " + "client", Toast.LENGTH_SHORT).show();
-			}
-		});
-
-		if (null != this.progress)
-		{
-			this.progress.dismiss();
-			this.progress = null;
-		}
 	};
 
 	@Override
-	public void onDisconnected(final TellyService client, final String message)
+	protected void onPause()
 	{
-		tellyService = null;
-		
-		if (null != this.progress)
-		{
-			this.progress.dismiss();
-			this.progress = null;
-		}
+		DevicesManager.getInstance().stopScan(getApplicationContext());
 
-		if (null != message)
-		{
-			this.handler.post(new Runnable()
-			{
-				public void run()
-				{
-					Toast.makeText(getApplicationContext(), "Dissonnected", Toast.LENGTH_SHORT).show();
-					
-					AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-					alertDialog.setTitle("BT connect error");
-					alertDialog.setMessage(message);
-
-					alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener()
-					{
-						public void onClick(DialogInterface dialog, int whichButton)
-						{
-						}
-					});
-
-					alertDialog.show();
-				}
-			});
-		}
+		super.onPause();
 	};
 
-    private Handler handler = null;
-    private ProgressDialog progress = null;
-	private static TellyService tellyService = null;
-	private static final int REQUEST_SELECT_DEVICE = 2;
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+
+		DevicesManager.getInstance().startScan(getApplicationContext(), this);
+	};
+
+	@Override
+	public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction)
+	{
+	};
+
+	@Override
+	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction)
+	{
+		this.viewPager.setCurrentItem(tab.getPosition());
+	};
+
+	@Override
+	public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction)
+	{
+	};
 };

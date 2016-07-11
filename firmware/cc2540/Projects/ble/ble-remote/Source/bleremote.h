@@ -6,21 +6,18 @@ extern "C"
 {
 #endif
 
-// BLE Peripheral Task Events
-#define SBP_START_DEVICE_EVT			0x0001
-#define SBP_PERIODIC_EVT				0x0002
-#define SBP_ADV_IN_CONNECTION_EVT		0x0004
-#define BATT_PERIODIC_EVT				0x0008
+#define REMOTE_START_DEVICE_EVENT      0x0001
+#define REMOTE_PERIODIC_EVENT          0x0002
+#define REMOTE_ADV_IN_CONNECTION_EVENT 0x0004
+#define BATT_PERIODIC_EVENT            0x0008
+#define CHANGE_TYPE_EVENT              0x0010
+#define REPEAT_COMMAND1_EVENT          0x0020
+#define REPEAT_COMMAND2_EVENT          0x0040
+#define DEVICE_PASSWORD_FLASH_ADDRESS  0x90
 
-/**
- * Task Initialization for the BLE Application
- */
-extern void BLERemotePeripheralInit(uint8 task_id);
-
-/**
- * Task Event Processor for the BLE Application
- */
-extern uint16 BLERemotePeripheralProcessEvent(uint8 task_id, uint16 events);
+extern void RemotePeripheralInit(uint8 taskId);
+extern uint16 RemotePeripheralProcessEvent(uint8 taskId, uint16 events);
+extern void Timer1Init();
 
 #ifdef __cplusplus
 }

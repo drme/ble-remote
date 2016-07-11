@@ -3,96 +3,96 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		260D188017A34146007D0044 /* icn_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 260D187C17A34146007D0044 /* icn_57x57.png */; };
-		260D188117A34146007D0044 /* icn_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 260D187D17A34146007D0044 /* icn_72x72.png */; };
-		260D188217A34146007D0044 /* icn_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 260D187E17A34146007D0044 /* icn_114x114.png */; };
-		260D188317A34146007D0044 /* icn_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 260D187F17A34146007D0044 /* icn_144x144.png */; };
-		260D188517A3416C007D0044 /* icn_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 260D188417A3416C007D0044 /* icn_57x57.png */; };
-		260D188717A3417E007D0044 /* icn_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 260D188617A3417E007D0044 /* icn_114x114.png */; };
-		260D188917A34194007D0044 /* icn_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 260D188817A34194007D0044 /* icn_72x72.png */; };
-		260D188B17A34199007D0044 /* icn_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 260D188A17A34199007D0044 /* icn_144x144.png */; };
 		2654D1E2179893350024266A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2654D1E1179893350024266A /* UIKit.framework */; };
 		2654D1E4179893350024266A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2654D1E3179893350024266A /* Foundation.framework */; };
 		2654D1E6179893350024266A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2654D1E5179893350024266A /* CoreGraphics.framework */; };
 		2654D1EC179893350024266A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2654D1EA179893350024266A /* InfoPlist.strings */; };
-		2654D1EE179893350024266A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2654D1ED179893350024266A /* main.m */; };
-		2654D1F2179893350024266A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2654D1F1179893350024266A /* AppDelegate.m */; };
-		2654D1F4179893350024266A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2654D1F3179893350024266A /* Default.png */; };
-		2654D1F6179893350024266A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2654D1F5179893350024266A /* Default@2x.png */; };
-		2654D1F8179893350024266A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2654D1F7179893350024266A /* Default-568h@2x.png */; };
 		2654D1FB179893350024266A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2654D1F9179893350024266A /* MainStoryboard_iPhone.storyboard */; };
-		2654D208179893350024266A /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2654D207179893350024266A /* StatusViewController.m */; };
-		2654D214179894260024266A /* RemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2654D213179894260024266A /* RemoteViewController.m */; };
-		2654D21717989EF40024266A /* SensorsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2654D21617989EF40024266A /* SensorsController.m */; };
-		2654D21A17989F0C0024266A /* TellySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2654D21917989F0C0024266A /* TellySensor.m */; };
-		2654D21D1798A4D50024266A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2654D21C1798A4D50024266A /* Utils.m */; };
 		2654D21F1798A4F30024266A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2654D21E1798A4F30024266A /* CoreBluetooth.framework */; };
-		72A8B02B17EF498100F606A3 /* button_border.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B02517EF498100F606A3 /* button_border.png */; };
-		72A8B02C17EF498100F606A3 /* dn.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B02617EF498100F606A3 /* dn.png */; };
-		72A8B02D17EF498100F606A3 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B02717EF498100F606A3 /* left.png */; };
-		72A8B02E17EF498100F606A3 /* nav_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B02817EF498100F606A3 /* nav_circle.png */; };
-		72A8B02F17EF498100F606A3 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B02917EF498100F606A3 /* right.png */; };
-		72A8B03017EF498100F606A3 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B02A17EF498100F606A3 /* up.png */; };
-		72A8B03217EF54CC00F606A3 /* bbbb.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B03117EF54CC00F606A3 /* bbbb.png */; };
-		72A8B03417EF54D500F606A3 /* vol_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B03317EF54D500F606A3 /* vol_up.png */; };
-		72A8B03817EF576A00F606A3 /* button_border_power.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B03517EF576A00F606A3 /* button_border_power.png */; };
-		72A8B03917EF576A00F606A3 /* button_border_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B03617EF576A00F606A3 /* button_border_square.png */; };
-		72A8B03A17EF576A00F606A3 /* vol_dn.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B03717EF576A00F606A3 /* vol_dn.png */; };
-		72A8B03C17EF5AD600F606A3 /* telly.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B03B17EF5AD600F606A3 /* telly.png */; };
+		7203B5D01C2D6D4800AF59B6 /* XBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203B5CF1C2D6D4800AF59B6 /* XBoxViewController.swift */; };
+		7203B5D21C2D839100AF59B6 /* XBoxDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203B5D11C2D839100AF59B6 /* XBoxDevice.swift */; };
+		7203B5D41C2D8A8F00AF59B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203B5D31C2D8A8F00AF59B6 /* AppDelegate.swift */; };
+		7203E37E1D25D208004E8A8E /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203E37D1D25D208004E8A8E /* BasePageViewController.swift */; };
+		7203E3801D25D347004E8A8E /* RemotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203E37F1D25D347004E8A8E /* RemotesViewController.swift */; };
+		720925741C2C9E9100C7B244 /* TellyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720925731C2C9E9100C7B244 /* TellyDevice.swift */; };
+		720925781C2CB64D00C7B244 /* DevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720925771C2CB64D00C7B244 /* DevicesManager.swift */; };
+		7209257A1C2D521300C7B244 /* ComputerDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720925791C2D521300C7B244 /* ComputerDevice.swift */; };
+		720FE41B1D28078A0045F5D3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720FE41A1D28078A0045F5D3 /* Utils.swift */; };
+		720FE41D1D284BBB0045F5D3 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720FE41C1D284BBB0045F5D3 /* StatusViewController.swift */; };
+		720FE41F1D294A1B0045F5D3 /* BleDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720FE41E1D294A1B0045F5D3 /* BleDevice.swift */; };
+		723FBD551BEF6B4300337002 /* FanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723FBD531BEF6B4300337002 /* FanViewController.swift */; };
+		723FBD591BEF7E2000337002 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723FBD581BEF7E2000337002 /* MainViewController.swift */; };
+		723FBD5B1BEF8FF600337002 /* FanDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723FBD5A1BEF8FF600337002 /* FanDevice.swift */; };
+		723FBD5D1BEFE40200337002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723FBD5C1BEFE40200337002 /* LaunchScreen.storyboard */; };
+		7246BCC21BFBC6D6004EA1F6 /* NeoPixelsDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7246BCC11BFBC6D6004EA1F6 /* NeoPixelsDevice.swift */; };
+		7246BCC61BFBD058004EA1F6 /* NeoPixelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7246BCC51BFBD058004EA1F6 /* NeoPixelsViewController.swift */; };
+		7260A6371C2021EA006E0321 /* JoyStickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7260A6361C2021EA006E0321 /* JoyStickView.m */; };
+		7260A63B1C2021FB006E0321 /* stick_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 7260A6381C2021FB006E0321 /* stick_base.png */; };
+		7260A63C1C2021FB006E0321 /* stick_hold.png in Resources */ = {isa = PBXBuildFile; fileRef = 7260A6391C2021FB006E0321 /* stick_hold.png */; };
+		7260A63D1C2021FB006E0321 /* stick_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7260A63A1C2021FB006E0321 /* stick_normal.png */; };
 		72A8B03E17EF7D6400F606A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A8B03D17EF7D6400F606A3 /* Images.xcassets */; };
+		72ADE6291D26E916007A91BA /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ADE6281D26E916007A91BA /* Remote.swift */; };
+		72ADE62B1D26E95B007A91BA /* IrProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ADE62A1D26E95B007A91BA /* IrProtocol.swift */; };
+		72ADE62D1D26EA1E007A91BA /* RemoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ADE62C1D26EA1E007A91BA /* RemoteButton.swift */; };
+		72ADE62F1D26EAB0007A91BA /* RemotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ADE62E1D26EAB0007A91BA /* RemotesManager.swift */; };
+		72ADE6311D26ECA3007A91BA /* RemoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ADE6301D26ECA3007A91BA /* RemoteViewController.swift */; };
+		72ADE6331D26F307007A91BA /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ADE6321D26F307007A91BA /* StyledButton.swift */; };
+		72CBA2181D271FD6005A2769 /* RemoteEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CBA2171D271FD6005A2769 /* RemoteEditViewController.swift */; };
+		72CBA21A1D2724C5005A2769 /* EditButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CBA2191D2724C5005A2769 /* EditButtonViewController.swift */; };
+		72FE11C31BFE8B1B001C352B /* PCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE11C21BFE8B1B001C352B /* PCViewController.swift */; };
+		AF73BC6E56574190A843A231 /* Pods_BLE_REMOTE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE3358F1A99D6F4BE39E0C7 /* Pods_BLE_REMOTE.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		260D187C17A34146007D0044 /* icn_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_57x57.png; sourceTree = "<group>"; };
-		260D187D17A34146007D0044 /* icn_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_72x72.png; sourceTree = "<group>"; };
-		260D187E17A34146007D0044 /* icn_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_114x114.png; sourceTree = "<group>"; };
-		260D187F17A34146007D0044 /* icn_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_144x144.png; sourceTree = "<group>"; };
-		260D188417A3416C007D0044 /* icn_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_57x57.png; sourceTree = "<group>"; };
-		260D188617A3417E007D0044 /* icn_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_114x114.png; sourceTree = "<group>"; };
-		260D188817A34194007D0044 /* icn_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_72x72.png; sourceTree = "<group>"; };
-		260D188A17A34199007D0044 /* icn_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_144x144.png; sourceTree = "<group>"; };
+		0ECA88D0A170BAB03CACC806 /* Pods-BLE-REMOTE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE-REMOTE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLE-REMOTE/Pods-BLE-REMOTE.debug.xcconfig"; sourceTree = "<group>"; };
 		2654D1DE179893350024266A /* BLE-REMOTE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE-REMOTE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2654D1E1179893350024266A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2654D1E3179893350024266A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2654D1E5179893350024266A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2654D1E9179893350024266A /* BLE-REMOTE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLE-REMOTE-Info.plist"; sourceTree = "<group>"; };
 		2654D1EB179893350024266A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2654D1ED179893350024266A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2654D1EF179893350024266A /* BLE-REMOTE-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLE-REMOTE-Prefix.pch"; sourceTree = "<group>"; };
-		2654D1F0179893350024266A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2654D1F1179893350024266A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2654D1F3179893350024266A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		2654D1F5179893350024266A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		2654D1F7179893350024266A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2654D1FA179893350024266A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		2654D206179893350024266A /* StatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusViewController.h; sourceTree = "<group>"; };
-		2654D207179893350024266A /* StatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusViewController.m; sourceTree = "<group>"; };
-		2654D212179894260024266A /* RemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteViewController.h; sourceTree = "<group>"; };
-		2654D213179894260024266A /* RemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteViewController.m; sourceTree = "<group>"; };
-		2654D21517989EF40024266A /* SensorsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorsController.h; sourceTree = "<group>"; };
-		2654D21617989EF40024266A /* SensorsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorsController.m; sourceTree = "<group>"; };
-		2654D21817989F0C0024266A /* TellySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TellySensor.h; sourceTree = "<group>"; };
-		2654D21917989F0C0024266A /* TellySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TellySensor.m; sourceTree = "<group>"; };
-		2654D21B1798A4D50024266A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		2654D21C1798A4D50024266A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		2654D21E1798A4F30024266A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		72A8B02517EF498100F606A3 /* button_border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_border.png; sourceTree = "<group>"; };
-		72A8B02617EF498100F606A3 /* dn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dn.png; sourceTree = "<group>"; };
-		72A8B02717EF498100F606A3 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
-		72A8B02817EF498100F606A3 /* nav_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_circle.png; sourceTree = "<group>"; };
-		72A8B02917EF498100F606A3 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
-		72A8B02A17EF498100F606A3 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
-		72A8B03117EF54CC00F606A3 /* bbbb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbbb.png; sourceTree = "<group>"; };
-		72A8B03317EF54D500F606A3 /* vol_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vol_up.png; sourceTree = "<group>"; };
-		72A8B03517EF576A00F606A3 /* button_border_power.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_border_power.png; sourceTree = "<group>"; };
-		72A8B03617EF576A00F606A3 /* button_border_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_border_square.png; sourceTree = "<group>"; };
-		72A8B03717EF576A00F606A3 /* vol_dn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vol_dn.png; sourceTree = "<group>"; };
-		72A8B03B17EF5AD600F606A3 /* telly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telly.png; sourceTree = "<group>"; };
+		7203B5CF1C2D6D4800AF59B6 /* XBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBoxViewController.swift; sourceTree = "<group>"; };
+		7203B5D11C2D839100AF59B6 /* XBoxDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBoxDevice.swift; sourceTree = "<group>"; };
+		7203B5D31C2D8A8F00AF59B6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7203E37D1D25D208004E8A8E /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
+		7203E37F1D25D347004E8A8E /* RemotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemotesViewController.swift; sourceTree = "<group>"; };
+		720925731C2C9E9100C7B244 /* TellyDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TellyDevice.swift; sourceTree = "<group>"; };
+		720925771C2CB64D00C7B244 /* DevicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesManager.swift; sourceTree = "<group>"; };
+		720925791C2D521300C7B244 /* ComputerDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputerDevice.swift; sourceTree = "<group>"; };
+		720FE41A1D28078A0045F5D3 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		720FE41C1D284BBB0045F5D3 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		720FE41E1D294A1B0045F5D3 /* BleDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BleDevice.swift; sourceTree = "<group>"; };
+		723FBD531BEF6B4300337002 /* FanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanViewController.swift; sourceTree = "<group>"; };
+		723FBD571BEF7BA400337002 /* BLE-REMOTE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLE-REMOTE-Bridging-Header.h"; sourceTree = "<group>"; };
+		723FBD581BEF7E2000337002 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		723FBD5A1BEF8FF600337002 /* FanDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanDevice.swift; sourceTree = "<group>"; };
+		723FBD5C1BEFE40200337002 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7246BCC11BFBC6D6004EA1F6 /* NeoPixelsDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeoPixelsDevice.swift; sourceTree = "<group>"; };
+		7246BCC51BFBD058004EA1F6 /* NeoPixelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeoPixelsViewController.swift; sourceTree = "<group>"; };
+		7260A6351C2021EA006E0321 /* JoyStickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoyStickView.h; sourceTree = "<group>"; };
+		7260A6361C2021EA006E0321 /* JoyStickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoyStickView.m; sourceTree = "<group>"; };
+		7260A6381C2021FB006E0321 /* stick_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick_base.png; sourceTree = "<group>"; };
+		7260A6391C2021FB006E0321 /* stick_hold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick_hold.png; sourceTree = "<group>"; };
+		7260A63A1C2021FB006E0321 /* stick_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick_normal.png; sourceTree = "<group>"; };
 		72A8B03D17EF7D6400F606A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		72ADE6281D26E916007A91BA /* Remote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
+		72ADE62A1D26E95B007A91BA /* IrProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IrProtocol.swift; sourceTree = "<group>"; };
+		72ADE62C1D26EA1E007A91BA /* RemoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteButton.swift; sourceTree = "<group>"; };
+		72ADE62E1D26EAB0007A91BA /* RemotesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemotesManager.swift; sourceTree = "<group>"; };
+		72ADE6301D26ECA3007A91BA /* RemoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteViewController.swift; sourceTree = "<group>"; };
+		72ADE6321D26F307007A91BA /* StyledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
+		72CBA2171D271FD6005A2769 /* RemoteEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteEditViewController.swift; sourceTree = "<group>"; };
+		72CBA2191D2724C5005A2769 /* EditButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditButtonViewController.swift; sourceTree = "<group>"; };
+		72FE11C21BFE8B1B001C352B /* PCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCViewController.swift; sourceTree = "<group>"; };
+		ABE3358F1A99D6F4BE39E0C7 /* Pods_BLE_REMOTE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_REMOTE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAC8D822204618BBEE1417B /* Pods-BLE-REMOTE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE-REMOTE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE-REMOTE/Pods-BLE-REMOTE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,7 @@
 				2654D1E2179893350024266A /* UIKit.framework in Frameworks */,
 				2654D1E4179893350024266A /* Foundation.framework in Frameworks */,
 				2654D1E6179893350024266A /* CoreGraphics.framework in Frameworks */,
+				AF73BC6E56574190A843A231 /* Pods_BLE_REMOTE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,26 +114,10 @@
 		2654D1D5179893350024266A = {
 			isa = PBXGroup;
 			children = (
-				72A8B03B17EF5AD600F606A3 /* telly.png */,
-				72A8B03517EF576A00F606A3 /* button_border_power.png */,
-				72A8B03617EF576A00F606A3 /* button_border_square.png */,
-				72A8B03717EF576A00F606A3 /* vol_dn.png */,
-				72A8B03317EF54D500F606A3 /* vol_up.png */,
-				72A8B02517EF498100F606A3 /* button_border.png */,
-				72A8B02617EF498100F606A3 /* dn.png */,
-				72A8B02717EF498100F606A3 /* left.png */,
-				72A8B02817EF498100F606A3 /* nav_circle.png */,
-				72A8B03117EF54CC00F606A3 /* bbbb.png */,
-				72A8B02917EF498100F606A3 /* right.png */,
-				72A8B02A17EF498100F606A3 /* up.png */,
-				260D188A17A34199007D0044 /* icn_144x144.png */,
-				260D188817A34194007D0044 /* icn_72x72.png */,
-				260D188617A3417E007D0044 /* icn_114x114.png */,
-				260D188417A3416C007D0044 /* icn_57x57.png */,
-				2654D21E1798A4F30024266A /* CoreBluetooth.framework */,
 				2654D1E7179893350024266A /* BLE-REMOTE */,
 				2654D1E0179893350024266A /* Frameworks */,
 				2654D1DF179893350024266A /* Products */,
+				D70CAD8B6A0B174A97B18578 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +132,11 @@
 		2654D1E0179893350024266A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2654D21E1798A4F30024266A /* CoreBluetooth.framework */,
 				2654D1E1179893350024266A /* UIKit.framework */,
 				2654D1E3179893350024266A /* Foundation.framework */,
 				2654D1E5179893350024266A /* CoreGraphics.framework */,
+				ABE3358F1A99D6F4BE39E0C7 /* Pods_BLE_REMOTE.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,25 +144,18 @@
 		2654D1E7179893350024266A /* BLE-REMOTE */ = {
 			isa = PBXGroup;
 			children = (
-				260D187C17A34146007D0044 /* icn_57x57.png */,
-				260D187E17A34146007D0044 /* icn_114x114.png */,
-				260D187D17A34146007D0044 /* icn_72x72.png */,
-				260D187F17A34146007D0044 /* icn_144x144.png */,
-				2654D21B1798A4D50024266A /* Utils.h */,
-				2654D21C1798A4D50024266A /* Utils.m */,
-				2654D21817989F0C0024266A /* TellySensor.h */,
-				2654D21917989F0C0024266A /* TellySensor.m */,
-				2654D21517989EF40024266A /* SensorsController.h */,
-				2654D21617989EF40024266A /* SensorsController.m */,
-				2654D212179894260024266A /* RemoteViewController.h */,
-				2654D213179894260024266A /* RemoteViewController.m */,
-				2654D1F0179893350024266A /* AppDelegate.h */,
-				2654D1F1179893350024266A /* AppDelegate.m */,
-				2654D1F9179893350024266A /* MainStoryboard_iPhone.storyboard */,
-				2654D206179893350024266A /* StatusViewController.h */,
-				2654D207179893350024266A /* StatusViewController.m */,
+				72ADE6271D26E8FC007A91BA /* Remote */,
+				7203B5D31C2D8A8F00AF59B6 /* AppDelegate.swift */,
+				720925771C2CB64D00C7B244 /* DevicesManager.swift */,
+				7260A6351C2021EA006E0321 /* JoyStickView.h */,
+				7260A6361C2021EA006E0321 /* JoyStickView.m */,
+				7260A6381C2021FB006E0321 /* stick_base.png */,
+				7260A6391C2021FB006E0321 /* stick_hold.png */,
+				7260A63A1C2021FB006E0321 /* stick_normal.png */,
 				72A8B03D17EF7D6400F606A3 /* Images.xcassets */,
+				720925721C2C4BEF00C7B244 /* Devices */,
 				2654D1E8179893350024266A /* Supporting Files */,
+				720925711C2C4BD600C7B244 /* UserInterface */,
 			);
 			path = "BLE-REMOTE";
 			sourceTree = "<group>";
@@ -183,15 +163,67 @@
 		2654D1E8179893350024266A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				723FBD571BEF7BA400337002 /* BLE-REMOTE-Bridging-Header.h */,
 				2654D1E9179893350024266A /* BLE-REMOTE-Info.plist */,
 				2654D1EA179893350024266A /* InfoPlist.strings */,
-				2654D1ED179893350024266A /* main.m */,
 				2654D1EF179893350024266A /* BLE-REMOTE-Prefix.pch */,
-				2654D1F3179893350024266A /* Default.png */,
-				2654D1F5179893350024266A /* Default@2x.png */,
-				2654D1F7179893350024266A /* Default-568h@2x.png */,
+				720FE41A1D28078A0045F5D3 /* Utils.swift */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		720925711C2C4BD600C7B244 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				72ADE6321D26F307007A91BA /* StyledButton.swift */,
+				7203E37D1D25D208004E8A8E /* BasePageViewController.swift */,
+				723FBD5C1BEFE40200337002 /* LaunchScreen.storyboard */,
+				723FBD531BEF6B4300337002 /* FanViewController.swift */,
+				723FBD581BEF7E2000337002 /* MainViewController.swift */,
+				7246BCC51BFBD058004EA1F6 /* NeoPixelsViewController.swift */,
+				72FE11C21BFE8B1B001C352B /* PCViewController.swift */,
+				7203B5CF1C2D6D4800AF59B6 /* XBoxViewController.swift */,
+				2654D1F9179893350024266A /* MainStoryboard_iPhone.storyboard */,
+				7203E37F1D25D347004E8A8E /* RemotesViewController.swift */,
+				72ADE6301D26ECA3007A91BA /* RemoteViewController.swift */,
+				72CBA2171D271FD6005A2769 /* RemoteEditViewController.swift */,
+				72CBA2191D2724C5005A2769 /* EditButtonViewController.swift */,
+				720FE41C1D284BBB0045F5D3 /* StatusViewController.swift */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		720925721C2C4BEF00C7B244 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				7203B5D11C2D839100AF59B6 /* XBoxDevice.swift */,
+				720925791C2D521300C7B244 /* ComputerDevice.swift */,
+				723FBD5A1BEF8FF600337002 /* FanDevice.swift */,
+				7246BCC11BFBC6D6004EA1F6 /* NeoPixelsDevice.swift */,
+				720925731C2C9E9100C7B244 /* TellyDevice.swift */,
+				720FE41E1D294A1B0045F5D3 /* BleDevice.swift */,
+			);
+			name = Devices;
+			sourceTree = "<group>";
+		};
+		72ADE6271D26E8FC007A91BA /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				72ADE6281D26E916007A91BA /* Remote.swift */,
+				72ADE62A1D26E95B007A91BA /* IrProtocol.swift */,
+				72ADE62C1D26EA1E007A91BA /* RemoteButton.swift */,
+				72ADE62E1D26EAB0007A91BA /* RemotesManager.swift */,
+			);
+			name = Remote;
+			sourceTree = "<group>";
+		};
+		D70CAD8B6A0B174A97B18578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0ECA88D0A170BAB03CACC806 /* Pods-BLE-REMOTE.debug.xcconfig */,
+				BFAC8D822204618BBEE1417B /* Pods-BLE-REMOTE.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2654D20F179893350024266A /* Build configuration list for PBXNativeTarget "BLE-REMOTE" */;
 			buildPhases = (
+				69B94BEDC76D0FA2BDE86B2E /* 📦 Check Pods Manifest.lock */,
 				2654D1DA179893350024266A /* Sources */,
 				2654D1DB179893350024266A /* Frameworks */,
 				2654D1DC179893350024266A /* Resources */,
+				9DC18F72E2DA291C44DC3E2E /* 📦 Embed Pods Frameworks */,
+				1B116426DB32DA2EECA92924 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,11 +255,17 @@
 		2654D1D6179893350024266A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = sarunas.eu;
+				TargetAttributes = {
+					2654D1DD179893350024266A = {
+						DevelopmentTeam = 3KZXKNX25U;
+					};
+				};
 			};
 			buildConfigurationList = 2654D1D9179893350024266A /* Build configuration list for PBXProject "BLE-REMOTE" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -245,49 +286,97 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72A8B03017EF498100F606A3 /* up.png in Resources */,
+				7260A63B1C2021FB006E0321 /* stick_base.png in Resources */,
+				7260A63C1C2021FB006E0321 /* stick_hold.png in Resources */,
 				2654D1EC179893350024266A /* InfoPlist.strings in Resources */,
-				72A8B03A17EF576A00F606A3 /* vol_dn.png in Resources */,
-				72A8B03217EF54CC00F606A3 /* bbbb.png in Resources */,
-				2654D1F4179893350024266A /* Default.png in Resources */,
-				2654D1F6179893350024266A /* Default@2x.png in Resources */,
-				72A8B03C17EF5AD600F606A3 /* telly.png in Resources */,
-				2654D1F8179893350024266A /* Default-568h@2x.png in Resources */,
 				2654D1FB179893350024266A /* MainStoryboard_iPhone.storyboard in Resources */,
 				72A8B03E17EF7D6400F606A3 /* Images.xcassets in Resources */,
-				72A8B02B17EF498100F606A3 /* button_border.png in Resources */,
-				72A8B03417EF54D500F606A3 /* vol_up.png in Resources */,
-				72A8B03917EF576A00F606A3 /* button_border_square.png in Resources */,
-				72A8B03817EF576A00F606A3 /* button_border_power.png in Resources */,
-				260D188017A34146007D0044 /* icn_57x57.png in Resources */,
-				260D188117A34146007D0044 /* icn_72x72.png in Resources */,
-				72A8B02E17EF498100F606A3 /* nav_circle.png in Resources */,
-				260D188217A34146007D0044 /* icn_114x114.png in Resources */,
-				260D188317A34146007D0044 /* icn_144x144.png in Resources */,
-				260D188517A3416C007D0044 /* icn_57x57.png in Resources */,
-				260D188717A3417E007D0044 /* icn_114x114.png in Resources */,
-				72A8B02F17EF498100F606A3 /* right.png in Resources */,
-				72A8B02C17EF498100F606A3 /* dn.png in Resources */,
-				260D188917A34194007D0044 /* icn_72x72.png in Resources */,
-				72A8B02D17EF498100F606A3 /* left.png in Resources */,
-				260D188B17A34199007D0044 /* icn_144x144.png in Resources */,
+				7260A63D1C2021FB006E0321 /* stick_normal.png in Resources */,
+				723FBD5D1BEFE40200337002 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B116426DB32DA2EECA92924 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLE-REMOTE/Pods-BLE-REMOTE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69B94BEDC76D0FA2BDE86B2E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC18F72E2DA291C44DC3E2E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLE-REMOTE/Pods-BLE-REMOTE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2654D1DA179893350024266A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2654D1EE179893350024266A /* main.m in Sources */,
-				2654D1F2179893350024266A /* AppDelegate.m in Sources */,
-				2654D208179893350024266A /* StatusViewController.m in Sources */,
-				2654D214179894260024266A /* RemoteViewController.m in Sources */,
-				2654D21717989EF40024266A /* SensorsController.m in Sources */,
-				2654D21A17989F0C0024266A /* TellySensor.m in Sources */,
-				2654D21D1798A4D50024266A /* Utils.m in Sources */,
+				7203B5D01C2D6D4800AF59B6 /* XBoxViewController.swift in Sources */,
+				7209257A1C2D521300C7B244 /* ComputerDevice.swift in Sources */,
+				720925741C2C9E9100C7B244 /* TellyDevice.swift in Sources */,
+				723FBD551BEF6B4300337002 /* FanViewController.swift in Sources */,
+				7203E3801D25D347004E8A8E /* RemotesViewController.swift in Sources */,
+				72CBA21A1D2724C5005A2769 /* EditButtonViewController.swift in Sources */,
+				72ADE62F1D26EAB0007A91BA /* RemotesManager.swift in Sources */,
+				720925781C2CB64D00C7B244 /* DevicesManager.swift in Sources */,
+				723FBD5B1BEF8FF600337002 /* FanDevice.swift in Sources */,
+				720FE41D1D284BBB0045F5D3 /* StatusViewController.swift in Sources */,
+				7203B5D41C2D8A8F00AF59B6 /* AppDelegate.swift in Sources */,
+				720FE41F1D294A1B0045F5D3 /* BleDevice.swift in Sources */,
+				72FE11C31BFE8B1B001C352B /* PCViewController.swift in Sources */,
+				72CBA2181D271FD6005A2769 /* RemoteEditViewController.swift in Sources */,
+				7203E37E1D25D208004E8A8E /* BasePageViewController.swift in Sources */,
+				7260A6371C2021EA006E0321 /* JoyStickView.m in Sources */,
+				7246BCC61BFBD058004EA1F6 /* NeoPixelsViewController.swift in Sources */,
+				72ADE6311D26ECA3007A91BA /* RemoteViewController.swift in Sources */,
+				72ADE6331D26F307007A91BA /* StyledButton.swift in Sources */,
+				72ADE62B1D26E95B007A91BA /* IrProtocol.swift in Sources */,
+				723FBD591BEF7E2000337002 /* MainViewController.swift in Sources */,
+				7246BCC21BFBC6D6004EA1F6 /* NeoPixelsDevice.swift in Sources */,
+				7203B5D21C2D839100AF59B6 /* XBoxDevice.swift in Sources */,
+				72ADE6291D26E916007A91BA /* Remote.swift in Sources */,
+				72ADE62D1D26EA1E007A91BA /* RemoteButton.swift in Sources */,
+				720FE41B1D28078A0045F5D3 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +416,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -338,7 +429,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,11 +450,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,13 +465,23 @@
 		};
 		2654D210179893350024266A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ECA88D0A170BAB03CACC806 /* Pods-BLE-REMOTE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLE-REMOTE/BLE-REMOTE-Prefix.pch";
 				INFOPLIST_FILE = "BLE-REMOTE/BLE-REMOTE-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ble-remote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BLE-REMOTE/BLE-REMOTE-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -387,13 +489,22 @@
 		};
 		2654D211179893350024266A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFAC8D822204618BBEE1417B /* Pods-BLE-REMOTE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLE-REMOTE/BLE-REMOTE-Prefix.pch";
 				INFOPLIST_FILE = "BLE-REMOTE/BLE-REMOTE-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ble-remote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BLE-REMOTE/BLE-REMOTE-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

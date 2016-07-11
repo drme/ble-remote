@@ -5,7 +5,7 @@
 #include "ll.h"
 #include "hci_tl.h"
 
-#if defined ( OSAL_CBTIMER_NUM_TASKS )
+#if defined(OSAL_CBTIMER_NUM_TASKS)
 	#include "osal_cbTimer.h"
 #endif
 
@@ -15,43 +15,32 @@
 #include "gapbondmgr.h"
 #include "gatt.h"
 #include "gattservapp.h"
-
-/* Profiles */
-#if defined (PLUS_BROADCASTER)
-	#include "peripheralBroadcaster.h"
-#else
-	#include "peripheral.h"
-#endif
-
+#include "peripheral.h"
 #include "bleremote.h"
 
-/**
- * The order in this table must be identical to the task initialization calls below in osalInitTask.
- */
 const pTaskEventHandlerFn tasksArr[] =
 {
-	LL_ProcessEvent,                                                  // task 0
-	Hal_ProcessEvent,                                                 // task 1
-	HCI_ProcessEvent,                                                 // task 2
-#if defined ( OSAL_CBTIMER_NUM_TASKS )
-	OSAL_CBTIMER_PROCESS_EVENT( osal_CbTimerProcessEvent ),           // task 3
+	LL_ProcessEvent,
+	Hal_ProcessEvent,
+	HCI_ProcessEvent,
+
+#if defined(OSAL_CBTIMER_NUM_TASKS)
+	OSAL_CBTIMER_PROCESS_EVENT(osal_CbTimerProcessEvent),
 #endif
-	L2CAP_ProcessEvent,                                               // task 4
-	GAP_ProcessEvent,                                                 // task 5
-	GATT_ProcessEvent,                                                // task 6
-	SM_ProcessEvent,                                                  // task 7
-	GAPRole_ProcessEvent,                                             // task 8
-	GAPBondMgr_ProcessEvent,                                          // task 9
-	GATTServApp_ProcessEvent,                                         // task 10
-	BLERemotePeripheralProcessEvent                                   // task 11
+
+L2CAP_ProcessEvent,
+	GAP_ProcessEvent,
+	GATT_ProcessEvent,
+	SM_ProcessEvent,
+	GAPRole_ProcessEvent,
+	GAPBondMgr_ProcessEvent,
+	GATTServApp_ProcessEvent,
+	RemotePeripheralProcessEvent
 };
 
 const uint8 tasksCnt = sizeof(tasksArr) / sizeof(tasksArr[0]);
 uint16* tasksEvents;
 
-/**
- * This function invokes the initialization function for each task.
- */
 void osalInitTasks(void)
 {
 	uint8 taskID = 0;
@@ -60,38 +49,21 @@ void osalInitTasks(void)
 
 	osal_memset(tasksEvents, 0, (sizeof(uint16) * tasksCnt));
 
-	/* LL Task */
 	LL_Init(taskID++);
-
-	/* Hal Task */
 	Hal_Init(taskID++);
-
-	/* HCI Task */
 	HCI_Init(taskID++);
 
 #if defined (OSAL_CBTIMER_NUM_TASKS)
-	/* Callback Timer Tasks */
 	osal_CbTimerInit(taskID);
 	taskID += OSAL_CBTIMER_NUM_TASKS;
 #endif
 
-	/* L2CAP Task */
 	L2CAP_Init( taskID++ );
-
-	/* GAP Task */
 	GAP_Init(taskID++);
-
-	/* GATT Task */
 	GATT_Init(taskID++);
-
-	/* SM Task */
 	SM_Init(taskID++);
-
-	/* Profiles */
 	GAPRole_Init(taskID++);
 	GAPBondMgr_Init(taskID++);
 	GATTServApp_Init(taskID++);
-
-	/* Application */
-	BLERemotePeripheralInit(taskID);
+	RemotePeripheralInit(taskID);
 };

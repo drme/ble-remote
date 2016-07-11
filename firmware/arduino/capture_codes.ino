@@ -1,83 +1,93 @@
+// ADD xyz libray
+// connect Tsometinh... pin 1 to 12, pin 2 to GND, pin 3 to +5V
+
 #include <IRremote.h>
 
-const int RECV_PIN = 2;
-IRrecv irrecv(RECV_PIN);
+int recvPin = 11;
+IRrecv irrecv(recvPin);
 
-void setup()
+void  setup ( )
 {
-  while (!Serial);
-  
-  Serial.begin(9600);
-  
-  Serial.println("go!");
-  
-  irrecv.enableIRIn(); // Start the receiver
-  irrecv.blink13(true);
-}
+  Serial.begin(115200);
+  irrecv.enableIRIn();
 
-template <typename T> T reverse(T n, size_t b = sizeof(T) * 8)
+  Serial.println("go3!");
+};
+
+unsigned char reverseBits(unsigned char x)
 {
-  T rv = 0;
+  x = ((x >> 1) & 0x55) | ((x << 1) & 0xaa);
+  x = ((x >> 2) & 0x33) | ((x << 2) & 0xcc);
+  x = ((x >> 4) & 0x0f) | ((x << 4) & 0xf0);
 
-  for (size_t i = 0; i < b; ++i, n >>= 1)
+  return x;    
+};
+
+void printCode(decode_results* results)
+{
+  unsigned long d = results->value;
+
+  switch (results->decode_type)
   {
-    rv = (rv << 1) | (n & 0x01);
+    case SONY:
+      {
+        unsigned char sircAddress = reverseBits((d & 0b11111) << 3);
+        unsigned char sircCode = reverseBits( ((unsigned char)((d & 0b11111111100000) >> 5)) << 1);
+        Serial.print("SIRC address: ");
+        Serial.print(sircAddress, DEC);
+        Serial.print(", command: ");
+        Serial.println(sircCode);
+      }
+      break;
+    case RC5:
+      {
+        unsigned int rc5Command = d & 0b111111;
+        unsigned int rc5Address = ((d & 0b11111000000) >> 6);
+        Serial.print("RC5 address: ");
+        Serial.print(rc5Address, DEC);
+        Serial.print(", command: ");
+        Serial.println(rc5Command, DEC);
+      }
+      break;
+    case NEC:
+      {
+        unsigned char necCommand = reverseBits((d & 0xff00) >> 8);
+        unsigned char necCommandInverted = ~reverseBits(d & 0xff);
+        unsigned int address = d >> 16;
+        unsigned char necAddress = reverseBits((address & 0xff00) >> 8);
+        unsigned char necAddressInverted = ~reverseBits(address & 0xff);
+
+        if (necAddress == necAddressInverted)
+        {
+          address = necAddress;
+        }
+        else
+        {
+          address = (reverseBits(address) << 8) | (reverseBits(address >> 8));
+        }
+        
+        Serial.print("NEC address: ");
+        Serial.print(address, DEC);
+        Serial.print(" (0x");
+        Serial.print(address, HEX);
+        Serial.print("), command: ");
+        Serial.println(necCommand, DEC);
+      }
+      break;
+    default:
+      break;
   }
+};
 
-  return rv;
-}
-
-void printSIRC(unsigned short value)
+void loop ()
 {
-  Serial.print("SIRC: address: ");
-  unsigned short address = reverse((value & 0x1f) << 11);
-  Serial.print(address, DEC);
-
-  unsigned short command = reverse((value >> 5) << 9);
-  Serial.print(" command: ");
-  Serial.println(command, DEC);
-}
-
-void printNEC(unsigned int value)
-{
-/*  Serial.print("NEC: address: ");
-  unsigned int address = reverse((value & 0xffff) << 16);
-  Serial.print(address, DEC);
-
-  unsigned int command = reverse(value & 0xffff0000);
-  Serial.print(" command: ");
-  Serial.println(command, DEC);*/
-}
-
-void loop()
-{
-  decode_results results;
+  decode_results  results;
 
   if (irrecv.decode(&results))
   {
-    if (results.decode_type == NEC)
-    {
-      printNEC(results.value);
-    }
-    else if (results.decode_type == SONY)
-    {
-      printSIRC(results.value);
-    }
-    else if (results.decode_type == RC5)
-    {
-      Serial.print("RC5: ");
-    }
-    else if (results.decode_type == RC6)
-    {
-      Serial.print("RC6: ");
-    }
-    else if (results.decode_type == UNKNOWN)
-    {
-      Serial.print("UNKNOWN: ");
-    }
-    
-    Serial.println(results.value, HEX);
-    irrecv.resume(); // Receive the next value
+    printCode(&results);
+    Serial.println("");
+    irrecv.resume();
   }
-}
+};
 

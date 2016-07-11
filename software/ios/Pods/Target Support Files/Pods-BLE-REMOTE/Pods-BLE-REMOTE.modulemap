@@ -1,0 +1,6 @@
+framework module Pods_BLE_REMOTE {
+  umbrella header "Pods-BLE-REMOTE-umbrella.h"
+
+  export *
+  module * { export * }
+}
