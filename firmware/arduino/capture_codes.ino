@@ -1,5 +1,5 @@
-// ADD xyz libray
-// connect Tsometinh... pin 1 to 12, pin 2 to GND, pin 3 to +5V
+// use https://github.com/z3t0/Arduino-IRremote/releases library
+// connect TSOP382 IR photo sensor output pin to arduino pin 12 (connect also connect GND and VCC to arduino)
 
 #include <IRremote.h>
 
