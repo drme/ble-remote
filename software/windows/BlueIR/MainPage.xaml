@@ -1,0 +1,87 @@
+﻿<Page x:Class="BlueIR.MainPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:BlueIR"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" Background="#FF2D2D2E" RequestedTheme="Dark">
+	<Page.BottomAppBar>
+		<CommandBar ClosedDisplayMode="Compact">
+			<AppBarButton Label="Left" Name="MoveLeft" Visibility="Collapsed" Click="MoveButtonLeftClick">
+				<AppBarButton.Icon>
+					<FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE76B;"/>
+				</AppBarButton.Icon>
+			</AppBarButton>
+			<AppBarButton Label="Right" Name="MoveRight" Visibility="Collapsed" Click="MoveButtonRightClick">
+				<AppBarButton.Icon>
+					<FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE76C;"/>
+				</AppBarButton.Icon>
+			</AppBarButton>
+			<AppBarButton Label="Up" Name="MoveUp" Visibility="Collapsed" Click="MoveButtonUpClick">
+				<AppBarButton.Icon>
+					<FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE70E;"/>
+				</AppBarButton.Icon>
+			</AppBarButton>
+			<AppBarButton Label="Down" Name="MoveDown" Visibility="Collapsed" Click="MoveButtonDownClick">
+				<AppBarButton.Icon>
+					<FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE70D;"/>
+				</AppBarButton.Icon>
+			</AppBarButton>
+			<AppBarButton x:Name="AddButtonButton" IsCompact="True" IsEnabled="True" Label="Add button" Icon="Add" Click="AddButtonClick" Visibility="Collapsed"/>
+			<AppBarToggleButton x:Name="EditButton" IsCompact="True" IsEnabled="True" Label="Edit" Icon="Edit" Click="StartEditClick"/>
+		</CommandBar>
+	</Page.BottomAppBar>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="48"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid Margin="0,0,0,0" Grid.Row="0" Background="#FF0658dd">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="48"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="48"/>
+			</Grid.ColumnDefinitions>
+			<Button FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="OpenMenuClick" Background="{x:Null}" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+			<TextBlock Text="Blue IR" Grid.Column="1" VerticalAlignment="Center"/>
+			<ProgressRing Grid.Column="2" IsActive="True" x:Name="ConnectingIndicator" Foreground="WhiteSmoke"/>
+		</Grid>
+		<SplitView x:Name="menuPanel" Grid.Row="1">
+			<SplitView.Content>
+				<Pivot x:Name="rootPivot" Background="Black">
+				</Pivot>
+			</SplitView.Content>
+			<SplitView.Pane>
+				<Grid Background="#FF2B2C2C">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="48"/>
+						<RowDefinition Height="48"/>
+						<RowDefinition Height="48"/>
+						<RowDefinition Height="48"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="48"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<StackPanel Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Orientation="Horizontal">
+						<Button FontFamily="Segoe MDL2 Assets" Content="&#xE719;" Click="GetBlueIRClick" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="48"/>
+						<Button Content="Get Blue IR" Click="GetBlueIRClick" Background="{x:Null}" HorizontalContentAlignment="Left" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="280"/>
+					</StackPanel>
+					<StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Orientation="Horizontal">
+						<Button FontFamily="Segoe MDL2 Assets" Content="&#xE710;" Click="AddRemoteClick" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="48"/>
+						<Button Content="Add Remote" Click="AddRemoteClick" Background="{x:Null}" Width="280" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"/>
+					</StackPanel>
+					<StackPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Orientation="Horizontal">
+						<Button FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Click="EditRemoteClick" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="48"/>
+						<Button Content="Edit Remote" Click="EditRemoteClick" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Width="280"/>
+					</StackPanel>
+					<StackPanel Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Orientation="Horizontal">
+						<Button FontFamily="Segoe MDL2 Assets" Content="&#xE738;" Click="RemoveRemoteClick" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="48"/>
+						<Button Content="Remove Remote" Click="RemoveRemoteClick" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Width="280"/>
+					</StackPanel>
+				</Grid>
+			</SplitView.Pane>
+		</SplitView>
+	</Grid>
+</Page>

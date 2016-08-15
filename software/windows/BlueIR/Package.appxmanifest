@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="0c3df6c0-bebe-46e6-aebf-1c1c63447356" Publisher="CN=Administrateur" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="0c3df6c0-bebe-46e6-aebf-1c1c63447356" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>BlueIR</DisplayName>
+    <PublisherDisplayName>Administrateur</PublisherDisplayName>
+    <Logo>Assets\StoreLogo-.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="BlueIR.App">
+      <uap:VisualElements DisplayName="Blue IR" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Build your own smart phone controller for your TV, HiFi, Radio, etc..Build smart phone controller following instructions at : https://github.com/drme/ble-remote/wiki or get built controller from https://www.tindie.com/products/some1/blue-ir/" BackgroundColor="#dedbe2">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Blue IR" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#dedbe2" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="wiFiControl" />
+    <DeviceCapability Name="bluetooth.genericAttributeProfile">
+      <Device Id="any">
+        <Function Type="serviceId:1803" />
+        <Function Type="serviceId:a739eeee-f6cd-1692-994a-d66d9e0ce048" />
+      </Device>
+    </DeviceCapability>
+  </Capabilities>
+</Package>

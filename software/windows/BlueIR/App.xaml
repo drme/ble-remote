@@ -1,0 +1,10 @@
+﻿<Application x:Class="BlueIR.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:BlueIR" RequestedTheme="Light">
+	<Application.Resources>
+		<ResourceDictionary>
+			<SolidColorBrush x:Key="AppBarBackgroundThemeBrush" Color="#FF0658dd"></SolidColorBrush>
+			<SolidColorBrush x:Key="SystemControlHighlightAccentBrush" Color="#FF0658dd"></SolidColorBrush>
+			<SolidColorBrush x:Key="SystemControlHighlightListAccentMediumBrush" Color="Red"></SolidColorBrush>
+			<SolidColorBrush x:Key="SystemControlHighlightListAccentHighBrush" Color="#FF0658dd"></SolidColorBrush>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

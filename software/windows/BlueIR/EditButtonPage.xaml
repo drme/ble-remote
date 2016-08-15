@@ -1,0 +1,77 @@
+﻿<Page x:Class="BlueIR.EditButtonPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:BlueIR"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" Background="#FF2D2D2E" RequestedTheme="Dark" >
+
+	<Page.BottomAppBar>
+		<CommandBar ClosedDisplayMode="Compact">
+		</CommandBar>
+	</Page.BottomAppBar>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="48"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid Grid.Row="0" Background="#FF0658dd" x:Name="Header">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="48"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="48"/>
+			</Grid.ColumnDefinitions>
+			<Button FontFamily="Segoe MDL2 Assets" Content="&#xE72B;" Background="{x:Null}" Grid.Column="0" Foreground="White" Click="BackClick" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+			<TextBlock x:Name="Title" Text="Edit button" Grid.Column="1" VerticalAlignment="Center" Foreground="White"/>
+		</Grid>
+		<Grid Grid.Row="1">
+			<Grid Margin="10" Grid.Row="1">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="45"/>
+					<RowDefinition Height="45"/>
+					<RowDefinition Height="45"/>
+					<RowDefinition Height="45"/>
+					<RowDefinition Height="45"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="100"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="Title" HorizontalAlignment="Left" Grid.Row="0" TextWrapping="Wrap" Grid.Column="0" VerticalAlignment="Center"/>
+				<TextBox x:Name="textBoxName" Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" PlaceholderText="button name" Text="{Binding Title}" Grid.Column="1"/>
+				<TextBlock Text="Command" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Grid.Column="0" VerticalAlignment="Center"/>
+				<Grid Grid.Row="1" Grid.Column="1">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="60"/>
+					</Grid.ColumnDefinitions>
+					<TextBox x:Name="textBoxCommand" VerticalAlignment="Center" PlaceholderText="address" Text="{Binding Command}" Grid.Column="0" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" InputScope="Number"/>
+					<Button Content="Test" Grid.Column="1" Margin="2, 0, 0, 0" HorizontalAlignment="Stretch" Click="TestClick"/>
+				</Grid>
+				<TextBlock Text="Address" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Grid.Column="0" VerticalAlignment="Center"/>
+				<TextBox x:Name="textBoxAddress" Grid.Row="2" VerticalAlignment="Center" PlaceholderText="address" Text="{Binding Address}" Grid.Column="1" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" InputScope="Number"/>
+				<TextBlock Text="Bounds" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Grid.Column="0" VerticalAlignment="Center"/>
+				<Grid Grid.Row="3" Grid.Column="1">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<TextBox x:Name="textBoxX" VerticalAlignment="Center" PlaceholderText="x" Text="{Binding X}" Grid.Column="0" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" InputScope="Number" Margin="0, 0, 3, 0"/>
+					<TextBox x:Name="textBoxY" VerticalAlignment="Center" PlaceholderText="y" Text="{Binding Y}" Grid.Column="1" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" InputScope="Number" Margin="0, 0, 3, 0"/>
+					<TextBox x:Name="textBoxWidth" VerticalAlignment="Center" PlaceholderText="width" Text="{Binding Width}" Grid.Column="2" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" InputScope="Number" Margin="0, 0, 1, 0"/>
+					<TextBox x:Name="textBoxHeight" VerticalAlignment="Center" PlaceholderText="height" Text="{Binding Height}" Grid.Column="3" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" InputScope="Number" Margin="2, 0, 0, 0"/>
+				</Grid>
+				<TextBlock Text="Protocol" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Grid.Column="0" VerticalAlignment="Center"/>
+				<ComboBox x:Name="comboBoxProtocol" Grid.Row="4" Grid.Column="1" SelectionChanged="ProtocolSelectionChanged" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+					<x:String>SIRC</x:String>
+					<x:String>NEC</x:String>
+					<x:String>RC5</x:String>
+				</ComboBox>
+				<WebView x:Name="webView"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
+			</Grid>
+		</Grid>
+	</Grid>
+</Page>
