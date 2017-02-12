@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>ble-leds/CC2540F128</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>450</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1395</ColumnWidth1><ColumnWidth2>372</ColumnWidth2><ColumnWidth3>93</ColumnWidth3></Build>
+      <TerminalIO/>
+    <Debug-Log><ColumnWidth0>29</ColumnWidth0><ColumnWidth1>1852</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-2101-29452</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>ble-leds</ExpandedNode><ExpandedNode>ble-leds/APP</ExpandedNode><ExpandedNode>ble-leds/HAL</ExpandedNode><ExpandedNode>ble-leds/HAL/Common</ExpandedNode><ExpandedNode>ble-leds/HAL/Include</ExpandedNode><ExpandedNode>ble-leds/HAL/Target</ExpandedNode><ExpandedNode>ble-leds/HAL/Target/CC2540EB</ExpandedNode><ExpandedNode>ble-leds/HAL/Target/CC2540EB/Config</ExpandedNode><ExpandedNode>ble-leds/HAL/Target/CC2540EB/Drivers</ExpandedNode><ExpandedNode>ble-leds/HAL/Target/CC2540EB/Includes</ExpandedNode><ExpandedNode>ble-leds/INCLUDE</ExpandedNode><ExpandedNode>ble-leds/LIB</ExpandedNode><ExpandedNode>ble-leds/NPI</ExpandedNode><ExpandedNode>ble-leds/OSAL</ExpandedNode><ExpandedNode>ble-leds/Output</ExpandedNode><ExpandedNode>ble-leds/PROFILES</ExpandedNode><ExpandedNode>ble-leds/TOOLS</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-23075-29469</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-27612-30263</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-12626-10448</Identity><TabName>Breakpoints</TabName><Factory>Breakpoints</Factory></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\devinfoservice-st.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\devinfoservice-st.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\leds.c</Filename><XPos>0</XPos><YPos>378</YPos><SelStart>7904</SelStart><SelEnd>7904</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\ledsprofile.c</Filename><XPos>0</XPos><YPos>12</YPos><SelStart>1702</SelStart><SelEnd>1702</SelEnd></Tab><ActiveTab>3</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\startup.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>242</SelStart><SelEnd>242</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\ledsprofile.h</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-070d1c10><key>iaridepm.enu1</key></Toolbar-070d1c10></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2><Row3><Sizes><Toolbar-0714c338><key>debuggergui.enu1</key></Toolbar-0714c338></Sizes></Row3></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>923</Bottom><Right>541</Right><x>-2</x><y>-2</y><xscreen>1249</xscreen><yscreen>1522</yscreen><sizeHorzCX>487891</sizeHorzCX><sizeHorzCY>1114202</sizeHorzCY><sizeVertCX>212109</sizeVertCX><sizeVertCY>677160</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>398</Bottom><Right>2562</Right><x>-2</x><y>-2</y><xscreen>2564</xscreen><yscreen>400</yscreen><sizeHorzCX>1001562</sizeHorzCX><sizeHorzCY>292826</sizeHorzCY><sizeVertCX>487891</sizeVertCX><sizeVertCY>1114202</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
